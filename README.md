@@ -1,1 +1,1 @@
-# Mackathon
+# Macathon
