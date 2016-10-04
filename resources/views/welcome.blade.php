@@ -1,91 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
-        <title>Laravel</title>
+    <link rel="stylesheet" type="text/css" href='css/bootstrap.css'>
+    <link rel="stylesheet" type="text/css" href='style.css'>
+    <script src='js/jquery-2.1.0.js'></script>
+    <script src='js/bootstrap.js'></script>
+    <script src='js/blocs.js'></script><link rel='stylesheet' href='css/font-awesome.min.css'/><link rel='stylesheet' href='css/ionicons.min.css'/><link href='http://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src='js/jqBootstrapValidation.js'></script>
+    <script src='js/formHandler.js'></script>
+    <title></title>
+</head>
+<body>
+<!-- Main container -->
+<div class="page-container">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <!-- Navigation Bloc -->
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    @include('templates.header')
 
-            .full-height {
-                height: 100vh;
-            }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <!-- Navigation Bloc END -->
 
-            .position-ref {
-                position: relative;
-            }
+    <!-- bloc-1 -->
+    @yield('content')
+    <!-- bloc-1 END -->
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+    <!-- bloc-2 -->
 
-            .content {
-                text-align: center;
-            }
+    <!-- bloc-3 END -->
 
-            .title {
-                font-size: 84px;
-            }
+    <!-- ScrollToTop Button -->
+    <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>
+    <!-- ScrollToTop Button END-->
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+</div>
+<!-- Main container END -->
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
-                </div>
-            @endif
+</body>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+<!-- Google Analytics -->
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+<!-- Google Analytics END -->
+
 </html>
