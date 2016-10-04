@@ -64,6 +64,12 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 .bloc-lg{
 	padding:100px 50px;
 }
+.bloc-md{
+	padding:50px;
+}
+.bloc-sm{
+	padding:20px 50px;
+}
 
 
 /* Background Styles */
@@ -246,6 +252,9 @@ button{
 	outline: none!important;
 }
 
+.btn-rd{
+	border-radius: 40px;
+}
 .btn-glossy{
 	border:1px solid rgba(0,0,0,.09);
 	border-bottom-color:rgba(0,0,0,.2);
@@ -256,10 +265,25 @@ button{
 	background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.07) 0%, rgba(255,255,255,.07) 100%);
 	background-image: linear-gradient(bottom, rgba(0,0,0,.07) 0%, rgba(255,255,255,.07) 100%);
 }
+.a-btn{
+	padding: 6px 10px 6px 0;
+	line-height: 1.42857143;
+	display:inline-block;
+}
+.text-center .a-btn{
+	padding: 6px 0;
+}
+.a-block{
+	width:100%;
+	text-align: left;
+}
 .dropdown a .caret{
 	margin:0 0 0 5px}
 /* = Icons
 -------------------------------------------------------------- */
+.icon-sm{
+	font-size:18px!important;
+}
 .icon-md{
 	font-size:30px!important;
 }
@@ -355,6 +379,9 @@ iframe{
 }
 .bgc-white-smoke{
 	background-color:#F7F7F7;
+}
+.bgc-light-slate-gray{
+	background-color:#6F88A3;
 }
 /* Text colour styles */
 
