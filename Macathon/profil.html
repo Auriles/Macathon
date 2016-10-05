@@ -12,7 +12,8 @@
 	<script src="./js/jquery-2.1.0.js"></script>
 	<script src="./js/bootstrap.js"></script>
 	<script src="./js/blocs.js"></script><link rel='stylesheet' href='./css/font-awesome.min.css'/><link rel='stylesheet' href='./css/ionicons.min.css'/><link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    
+    <script src='./js/jqBootstrapValidation.js'></script>
+	<script src='./js/formHandler.js'></script>
     <title>Profil - </title>
 </head>
 <body>
@@ -37,16 +38,75 @@
 							<li>
 								<a href="connexion.html" class="ltc-anti-flash-white">Se connecter</a>
 							</li>
-							<li>
-								<a href="index.html" class="ltc-anti-flash-white">Apporter une aide</a>
-							</li>
 						</ul>
 					</div>
 				</nav>
 			</div>
 		</div>
 	</div>
-</div><!-- Navigation Bloc END --><!-- Footer - bloc-5 --><div class="bloc bgc-pastel-blue l-bloc b-divider" id="bloc-5">
+</div><!-- Navigation Bloc END --><!-- bloc-5 --><div class="bloc bgc-white-smoke l-bloc" id="bloc-5">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="panel">
+					<div class="panel-heading">
+						<h3 class="mg-clear text-center">
+							Mes Informations
+						</h3>
+					</div>
+					<div class="panel-body">
+						<form id="form_2264" novalidate>
+							<div class="form-group">
+								<label>
+									Nom
+								</label>
+								<input class="form-control" id="input_1187" required />
+							</div>
+							<div class="form-group">
+								<label>
+									Prénom
+								</label>
+								<input class="form-control" id="input_1803" required />
+							</div>
+							<div class="form-group">
+								<label>
+									Adresse
+								</label>
+								<input class="form-control" id="input_1023" required />
+							</div>
+							<div class="form-group">
+								<label>
+									Ville
+								</label>
+								<input class="form-control" id="input_1571" required />
+							</div>
+							<div class="form-group">
+								<label>
+									Code postal
+								</label>
+								<input class="form-control" id="input_798" required />
+							</div><a href="index.html" class="a-btn a-block ltc-black">Mes prestations</a>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="panel">
+					<div class="panel-heading">
+						<img src="img/placeholder-user.png" class="img-circle" width="100" height="100" />
+					</div>
+					<div class="panel-body">
+						<form id="form_1041" novalidate>
+							<div class="form-group">
+								<textarea class="form-control" rows="4" cols="50" id="description" data-validation-required-message="description is required." placeholder="Veuillez saisir une description de vous que les autres utilisateurs pourront voir"></textarea>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- bloc-5 END --><!-- Footer - bloc-6 --><div class="bloc bgc-pastel-blue l-bloc b-divider" id="bloc-6">
 	<div class="container bloc-sm">
 		<div class="row">
 			<div class="col-sm-4">
@@ -69,7 +129,7 @@
 			</div>
 		</div>
 	</div>
-</div><!-- Footer - bloc-5 END -->
+</div><!-- Footer - bloc-6 END -->
 </div>
 <!-- Main container END -->
 

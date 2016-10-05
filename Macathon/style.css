@@ -304,6 +304,9 @@ nav .caret{
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
+.mg-clear{
+	margin:0;
+}
 .mg-md{
 	margin-top:10px;
 	margin-bottom:20px;
@@ -361,6 +364,9 @@ button{
 .icon-sm{
 	font-size:18px!important;
 }
+.icon-md{
+	font-size:30px!important;
+}
 .icon-lg{
 	font-size:60px!important;
 }
@@ -411,6 +417,16 @@ button{
 }
 
 
+/* = Panels
+-------------------------------------------------------------- */
+.panel{
+	border:0!important;
+	box-shadow: 0 0 2px rgba(0,0,0,.4);
+}
+.panel-heading, .panel-footer{
+	background-color: inherit;
+	border-color: rgba(0,0,0,.1)!important;
+}
 .panel-sq, .panel-sq .panel-heading, .panel-sq .panel-footer{
 	border-radius:0;
 }
@@ -471,9 +487,6 @@ iframe{
 .bgc-white-smoke{
 	background-color:#F7F7F7;
 }
-.bgc-anti-flash-white{
-	background-color:#F2F2F2;
-}
 /* Text colour styles */
 
 .tc-white{
@@ -504,6 +517,12 @@ iframe{
 }
 .ltc-anti-flash-white:hover{
 	color:#c2c2c2!important;
+}
+.ltc-black{
+	color:#000000!important;
+}
+.ltc-black:hover{
+	color:#000000!important;
 }
 /* Icon colour styles */
 
