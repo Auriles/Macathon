@@ -16,15 +16,21 @@ a:hover{text-decoration: none; cursor:pointer;}
 a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari */
 
 
-   
+a{
+	color:lor:#ED6465!important;
+}
+
+ a:hover{
+	color:#000000!important;
+	 text-decoration: none;
+	 cursor:pointer;
+}
+
 
 
 /* Globals type styling */
-    h1, h2, h3, h4, h5, h6, p, label, a{
-	font-family:"Helvetica";
-}
-.btn{
-	font-family:Abril Fatface;
+ h1, h2, h3, h4, h5, h6, p, label, .btn, a{
+	font-family:Roboto;
 }
 
 .btn{
@@ -85,6 +91,70 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 
+/* Background Effects */
+
+.b-parallax{
+	background-attachment:fixed;
+}
+
+
+/* Dark theme */
+
+.d-bloc{
+	color:rgba(255,255,255,.7);
+}
+.d-bloc button:hover{
+	color:rgba(255,255,255,.9);
+}
+.d-bloc h1, .d-bloc h2, .d-bloc h3, .d-bloc h4,.d-bloc h5, .d-bloc h6, .d-bloc .ico{
+	color:rgba(255,255,255,.9);
+}
+.d-bloc .icon-round,.d-bloc .icon-square,.d-bloc .icon-rounded,.d-bloc .icon-semi-rounded-a,.d-bloc .icon-semi-rounded-b{
+	border-color:rgba(255,255,255,.9);
+}
+.d-bloc .divider-h span{
+	border-color:rgba(255,255,255,.2);
+}
+.d-bloc a{
+	color:rgba(255,255,255,.6);
+}
+.d-bloc a:hover{
+	color:rgba(255,255,255,1);
+}
+.d-bloc .navbar-toggle .icon-bar{
+	background:rgba(255,255,255,1);
+}
+.d-bloc .btn-wire,.d-bloc .btn-wire:hover{
+	color:rgba(255,255,255,1);
+	border-color:rgba(255,255,255,1);
+}
+.d-bloc .panel{
+	color:rgba(0,0,0,.5);
+}
+.d-bloc .panel button:hover{
+	color:rgba(0,0,0,.7);
+}
+.d-bloc .panel h1,.d-bloc .panel h2, .d-bloc .panel h3, .d-bloc .panel h4, .d-bloc .panel h5, .d-bloc .panel h6, .d-bloc .ico{
+	color:rgba(0,0,0,.7);
+}
+.d-bloc .panel icon{
+	border-color:rgba(0,0,0,.7);
+}
+.d-bloc .panel .divider-h span{
+	border-color:rgba(0,0,0,.1);
+}
+.d-bloc .panel a{
+	color:rgba(0,0,0,.6);
+}
+.d-bloc .panel a:hover{
+	color:rgba(0,0,0,1);
+}
+.d-bloc .panel .btn-wire, .d-bloc .panel .btn-wire:hover{
+	color:rgba(0,0,0,.7);
+	border-color:rgba(0,0,0,.3);
+}
+
+
 /* Light theme */
 
 .l-bloc{
@@ -114,6 +184,12 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 .l-bloc .btn-wire, .l-bloc .btn-wire:hover{
 	color:rgba(0,0,0,.7);
 	border-color:rgba(0,0,0,.3);
+}
+
+/* Row Margin Offsets */
+
+.voffset-md{
+	margin-top:50px;
 }
 /* Dividers */
 
@@ -277,15 +353,16 @@ button{
 	width:100%;
 	text-align: left;
 }
-.dropdown a .caret{
+.btn .caret{
+	margin:0 0 0 5px}.dropdown a .caret{
 	margin:0 0 0 5px}
 /* = Icons
 -------------------------------------------------------------- */
 .icon-sm{
 	font-size:18px!important;
 }
-.icon-md{
-	font-size:30px!important;
+.icon-lg{
+	font-size:60px!important;
 }
 .icon-round{
 	margin:0 auto;
@@ -315,6 +392,23 @@ button{
 	border-radius:34px;
 }
 
+/* = Text & Icon Styles
+-------------------------------------------------------------- */
+.lg-shadow{
+	text-shadow:0 2px 5px rgba(0,0,0,.5);
+}
+.pressed-t{
+	text-shadow:0 1px 0 #FFF;
+}
+/* = Text Widths
+-------------------------------------------------------------- */
+.text-w-sm{
+	max-width:150px;
+}
+.text-center.text-w-sm, .text-center.text-w-md, .text-center.text-w-lg{
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 .panel-sq, .panel-sq .panel-heading, .panel-sq .panel-footer{
@@ -374,22 +468,27 @@ iframe{
 .bgc-pastel-blue{
 	background-color:#B3C3CD;
 }
-.bgc-anti-flash-white{
-	background-color:#F2F2F2;
-}
 .bgc-white-smoke{
 	background-color:#F7F7F7;
 }
-.bgc-light-slate-gray{
-	background-color:#6F88A3;
+.bgc-anti-flash-white{
+	background-color:#F2F2F2;
 }
 /* Text colour styles */
 
-.tc-feldgrau{
-	color:#475665!important;
+.tc-white{
+	color:#FFFFFF!important;
 }
 /* Button colour styles */
 
+.btn-white{
+	background:#FFFFFF;
+	color:rgba(0,0,0,.5)!important;
+}
+.btn-white:hover{
+	background:#cccccc;
+	color:rgba(0,0,0,.5)!important;
+}
 .btn-light-slate-gray{
 	background:#6F88A3;
 	color:#FFFFFF!important;
@@ -400,19 +499,31 @@ iframe{
 }
 /* Link colour styles */
 
-.ltc-white{
-	color:#FFFFFF!important;
+.ltc-anti-flash-white{
+	color:#F2F2F2!important;
 }
-.ltc-white:hover{
-	color:#cccccc!important;
+.ltc-anti-flash-white:hover{
+	color:#c2c2c2!important;
 }
 /* Icon colour styles */
 
-.icon-feldgrau{
-	color:#475665!important;
-	border-color:#475665!important;
+.icon-anti-flash-white{
+	color:#F2F2F2!important;
+	border-color:#F2F2F2!important;
+}
+.icon-white{
+	color:#FFFFFF!important;
+	border-color:#FFFFFF!important;
 }
 
+/* Bloc image backgrounds */
+
+.bg-Fotolia-106742253-S{
+	background-image:url('img/Fotolia_106742253_S.jpg');
+}
+.bg-vieux5{
+	background-image:url('img/vieux5.jpg');
+}
 
 
 

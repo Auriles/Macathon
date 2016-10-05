@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="./js/jquery-2.1.0.js"></script>
 	<script src="./js/bootstrap.js"></script>
-	<script src="./js/blocs.js"></script><link rel='stylesheet' href='./css/font-awesome.min.css'/><link rel='stylesheet' href='./css/ionicons.min.css'/><link href='http://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<script src="./js/blocs.js"></script><link rel='stylesheet' href='./css/font-awesome.min.css'/><link rel='stylesheet' href='./css/ionicons.min.css'/><link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <script src='./js/jqBootstrapValidation.js'></script>
 	<script src='./js/formHandler.js'></script>
     <title></title>
@@ -31,81 +31,96 @@
 			<div class="collapse navbar-collapse navbar-1">
 				<ul class="site-navigation nav navbar-nav">
 					<li>
-						<a href="inscription.html" class="ltc-white">S'inscrire</a>
+						<a href="inscription.html" class="ltc-anti-flash-white">S'inscrire</a>
 					</li>
 					<li>
-						<a href="#" class="ltc-white" id="pl-undefined">Se connecter</a>
+						<a href="connexion.html" class="ltc-anti-flash-white">Se connecter</a>
 					</li>
 					<li>
-						<a href="#" class="ltc-white" id="pl-undefined">Apporter une aide</a>
-					</li>
-					<li>
-						<a href="connexion.html">Connexion</a>
+						<a href="index.html" class="ltc-anti-flash-white">Apporter une aide</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 	</div>
-</div><!-- Navigation Bloc END --><!-- bloc-1 --><div class="bloc bgc-anti-flash-white l-bloc" id="bloc-1">
+</div><!-- Navigation Bloc END --><!-- bloc-1 --><div class="bloc b-parallax bgc-white-smoke bg-vieux5 d-bloc" id="bloc-1">
 	<div class="container bloc-lg">
-		<div class="row">
+		<div class="row drag-obj">
+			<div class="col-sm-3">
+				<div class="text-center">
+					<span class="ion ion-ios-location icon-lg icon-round pressed-t icon-anti-flash-white"></span>
+				</div>
+				<h3 class="text-center mg-md text-w-sm tc-white lg-shadow">
+					<strong>Proximité</strong>
+				</h3>
+			</div>
+			<div class="col-sm-3">
+				<div class="text-center">
+					<span class="ion ion-wrench icon-round icon-lg pressed-t icon-white"></span>
+				</div>
+				<h3 class="text-center mg-md text-w-sm tc-white lg-shadow">
+					<strong>Dépannage et Assistance</strong>
+				</h3>
+			</div>
+			<div class="col-sm-3">
+				<div class="text-center">
+					<span class="ion ion-ios-gear icon-round icon-lg pressed-t icon-white"></span>
+				</div>
+				<h3 class="text-center mg-md text-w-sm tc-white lg-shadow">
+					<strong>Installation, Configuration</strong>
+				</h3>
+			</div>
+			<div class="col-sm-3">
+				<div class="text-center">
+					<span class="ion ion-flash icon-round icon-lg pressed-t icon-white"></span>
+				</div>
+				<h3 class="mg-md text-center text-w-sm tc-white lg-shadow">
+					<strong>Restez connecté</strong>
+				</h3>
+			</div>
+		</div>
+		<div class="row voffset-md">
 			<div class="col-sm-4">
-				<form id="form_1358" novalidate>
+				<div class="btn-group btn-block">
+					<a href="#" class="btn dropdown-toggle  btn-block btn-sm btn-glossy btn-white" data-toggle="dropdown" aria-expanded="false">Sur quel appareil ?<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="index.html" class="a-btn a-block">Ordinateur</a>
+						</li>
+						<li>
+							<a href="index.html" class="a-btn a-block">Box / Internet</a>
+						</li>
+						<li>
+							<a href="index.html" class="a-btn a-block">Périphérique externe en wifi</a>
+						</li>
+						<li>
+							<a href="index.html" class="a-btn a-block">Smartphone</a>
+						</li>
+						<li>
+							<a href="index.html" class="a-btn a-block">Connectique</a>
+						</li>
+						<li>
+							<a href="index.html" class="a-btn a-block">Smart TV</a>
+						</li>
+						<li>
+							<a href="index.html" class="a-btn a-block">Cloud</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<form id="form_2121" novalidate>
 					<div class="form-group">
-						<input class="form-control" required placeholder="Quelle aide recherchez vous ?" id="input_384" />
+						<input class="form-control" required id="cdepostal" data-validation-required-message="cdepostal is required." placeholder="Veuillez saisir votre code postal" />
 					</div>
 				</form>
 			</div>
 			<div class="col-sm-4">
-				<form id="form_2344" novalidate>
-					<div class="form-group">
-						<input class="form-control" required placeholder="Adresse précise, métro, ville ou quartier" id="input_679" />
-					</div>
-				</form>
-			</div>
-			<div class="col-sm-4">
-				<a href="index.html" class="btn  btn-glossy btn-light-slate-gray pull-left">Rechercher</a>
+				<a href="index.html" class="btn  btn-glossy btn-block btn-white">Rechercher</a>
 			</div>
 		</div>
 	</div>
-</div><!-- bloc-1 END --><!-- bloc-2 --><div class="bloc bgc-white-smoke l-bloc" id="bloc-2">
-	<div class="container bloc-lg">
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="text-center">
-					<span class="ion ion-ios-location icon-round icon-md icon-feldgrau"></span>
-				</div>
-				<h3 class="text-center mg-md tc-feldgrau">
-					Proximité
-				</h3>
-			</div>
-			<div class="col-sm-3">
-				<div class="text-center">
-					<span class="ion ion-wrench icon-round icon-md icon-feldgrau"></span>
-				</div>
-				<h3 class="text-center mg-md tc-feldgrau">
-					Dépannage et Assistance
-				</h3>
-			</div>
-			<div class="col-sm-3">
-				<div class="text-center">
-					<span class="ion ion-ios-gear icon-round icon-md icon-feldgrau"></span>
-				</div>
-				<h3 class="text-center mg-md tc-feldgrau">
-					Installation, Configuration
-				</h3>
-			</div>
-			<div class="col-sm-3">
-				<div class="text-center">
-					<span class="ion ion-flash icon-round icon-md icon-feldgrau"></span>
-				</div>
-				<h3 class="text-center mg-md tc-feldgrau">
-					Restez connecté
-				</h3>
-			</div>
-		</div>
-	</div>
-</div><!-- bloc-2 END --><!-- bloc-3 --><div class="bloc bgc-anti-flash-white l-bloc" id="bloc-3">
+</div><!-- bloc-1 END --><!-- bloc-2 --><div class="bloc bgc-anti-flash-white l-bloc" id="bloc-2">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-3">
@@ -138,7 +153,7 @@
 			<div class="col-sm-3">
 				<img src="img/juan.jpeg" class="img-rd-md" width="200" height="200" />
 				<h3 class="mg-md">
-					Jean Serin
+					Jean Serien
 				</h3>
 				<p>
 					"Plus de doute, au moindre problème avec mon ordinateur, j&rsquo;utiliserai Connectinfo."
@@ -146,7 +161,7 @@
 			</div>
 		</div>
 	</div>
-</div><!-- bloc-3 END --><!-- ScrollToTop Button --><a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a><!-- ScrollToTop Button END--><!-- Footer - bloc-6 --><div class="bloc bgc-pastel-blue l-bloc" id="bloc-6">
+</div><!-- bloc-2 END --><!-- ScrollToTop Button --><a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a><!-- ScrollToTop Button END--><!-- Footer - bloc-5 --><div class="bloc bgc-pastel-blue l-bloc b-divider" id="bloc-5">
 	<div class="container bloc-sm">
 		<div class="row">
 			<div class="col-sm-4">
@@ -169,7 +184,7 @@
 			</div>
 		</div>
 	</div>
-</div><!-- Footer - bloc-6 END -->
+</div><!-- Footer - bloc-5 END -->
 </div>
 <!-- Main container END -->
 
