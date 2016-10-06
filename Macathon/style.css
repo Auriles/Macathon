@@ -29,8 +29,22 @@ a{
 
 
 /* Globals type styling */
- h1, h2, h3, h4, h5, h6, p, label, .btn, a{
-	font-family:Roboto;
+ h4, h5, h6, p, label, a{
+	font-family:Open Sans Condensed;
+	font-weight:300;
+}
+.btn{
+	font-family:Open Sans;
+	font-weight:400;
+}
+h1{
+	font-family:Montserrat;
+}
+h2{
+	font-family:Montserrat;
+}
+h3{
+	font-family:Montserrat;
 }
 
 .btn{
@@ -307,9 +321,17 @@ nav .caret{
 .mg-clear{
 	margin:0;
 }
+.mg-sm{
+	margin-top:10px;
+	margin-bottom:5px;
+}
 .mg-md{
 	margin-top:10px;
 	margin-bottom:20px;
+}
+.mg-lg{
+	margin-top:10px;
+	margin-bottom:40px;
 }
 
 /* = Buttons
@@ -363,9 +385,6 @@ button{
 -------------------------------------------------------------- */
 .icon-sm{
 	font-size:18px!important;
-}
-.icon-md{
-	font-size:30px!important;
 }
 .icon-lg{
 	font-size:60px!important;
@@ -440,6 +459,22 @@ button{
 	border-radius:0 0 29px 29px;
 }
 
+/* = Dividers
+-------------------------------------------------------------- */
+.divider-h{
+	padding:20px 0;
+}
+.divider-h span{
+	display: block;
+	border-top:1px solid transparent;
+}
+.divider-half{
+	width: 50%;
+	margin: 0 auto;
+}
+.dropdown-menu .divider-h,.dropdown-menu .divider-half{
+	padding:0;
+}
 
 /* = Forms
 -------------------------------------------------------------- */
@@ -517,12 +552,6 @@ iframe{
 }
 .ltc-anti-flash-white:hover{
 	color:#c2c2c2!important;
-}
-.ltc-black{
-	color:#000000!important;
-}
-.ltc-black:hover{
-	color:#000000!important;
 }
 /* Icon colour styles */
 
