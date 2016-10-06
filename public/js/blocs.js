@@ -1,5 +1,6 @@
 // Loading page complete
-$(window).load(function()
+$(window).on('load', function()
+
 {
 	checkHero(); // Check hero height is correct
 	animateWhenVisible();  // Activate animation when visible	

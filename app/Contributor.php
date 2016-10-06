@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
@@ -60,5 +61,9 @@ class Contributor extends Model
             ->select('avis.message');
     }
 
+    function getContributorId(){
+        $id = Auth::user()->id;
+        return DB::select('select contributor.id from contributor join users on contributor.userid = users.id where users.id = ' . $id );
+    }
 
 }
