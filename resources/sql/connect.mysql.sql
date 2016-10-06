@@ -110,6 +110,7 @@ CREATE TABLE `operation` (
   `avisid` int(10) unsigned DEFAULT NULL,
   `prix` double DEFAULT NULL,
   `state` enum('pending','accepted','processing','done','cancelled') COLLATE utf8_unicode_ci DEFAULT NULL,
+  `note` int(10),
   PRIMARY KEY (`id`),
   KEY `operation_serviceid_foreign` (`serviceid`),
   KEY `operation_customer_foreign` (`customer`),
@@ -141,7 +142,7 @@ DROP TABLE IF EXISTS `service`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `service` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `choices` enum('computer','cloud','box','periph','smartphone','connectique','smarttv') COLLATE utf8_unicode_ci DEFAULT NULL,
+  `choices` enum('Ordinateur','Cloud','Box / Internet','Périphérique externe en wifi','Smartphone','Connectique','Smart TV') COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -152,7 +153,7 @@ CREATE TABLE `service` (
 
 LOCK TABLES `service` WRITE;
 /*!40000 ALTER TABLE `service` DISABLE KEYS */;
-INSERT INTO `service` VALUES (1,'computer'),(2,'cloud'),(3,'box'),(4,'periph'),(5,'smartphone'),(6,'connectique'),(7,'smarttv');
+INSERT INTO `service` VALUES (1,'Ordinateur'),(2,'Cloud'),(3,'Box / Internet'),(4,'Périphérique externe en wifi'),(5,'Smartphone'),(6,'Connectique'),(7,'Smart TV');
 /*!40000 ALTER TABLE `service` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -175,7 +176,6 @@ CREATE TABLE `users` (
   `city` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `zipcode` int(11) NOT NULL,
   `image` blob,
-  `stateid` enum('user','contributor') COLLATE utf8_unicode_ci DEFAULT NULL,
   `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -191,7 +191,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'drattak','$2y$10$tAoFuncwQXKkqvVbenoLgO2AJo0q7p9D2Sn/mwUQ0G9RQAvG87Y56','EMILE','Vincent','vl.emile@gmail.com',636957023,'1 Square Charles Delaunay','ASNIERES SUR SEINE',92600,NULL,'user','LSxuIEuOwuuKf8rieooiDlMDcUJssiokYvr0kMN7AzSPXbaeQwpASH9smcQe','2016-10-05 07:49:54','2016-10-05 17:41:29'),(2,'adelys','$2y$10$/hjffR6gyvxfkN9YUgXX3O5uuoxD7J7l9mBUWnqg6rVyEz.KCaEOm','EMILE','Dominique','adelys974@gmail.com',179307424,'1 Square Charles Delaunay','ASNIERES SUR SEINE',92600,NULL,NULL,'4lMaKgbSDVdrS8fiOvW5rOVKKaGaFEuxpILw1z6bDcMuWKPrItZH2V1oM26g','2016-10-05 15:20:23','2016-10-05 16:28:55'),(3,'testtest','$2y$10$wK3N23J6kkucGI5Cp76/rekc6iXDUD9gQbr6OhO79UIlPomGg.IKG','test','test','test@test.fr',102030405,'test','Levallois-Perret',92300,NULL,NULL,'5UYA5QwUrh2AEBBXCWs7dF1AuxdbJRNpPZ9s4bfDtW0jJyg46xgrfY9iqp4o','2016-10-05 16:53:27','2016-10-05 16:54:55'),(4,'bobjambon','$2y$10$xhIuYM5BKCUARhZBZAmUlOPrSt7Lbh4X1Egryv1337or9zVeDHNju','EMILE','Vincent','test@doubletest.fr',655555555,'1 Square Charles Delaunay','ASNIERES SUR SEINE',92600,NULL,NULL,'pE8scsMAh7dkYaufGHAUnaLetf80Azj03cvolvkBrPSHSJWd8eqJH81dOGsz','2016-10-05 16:56:53','2016-10-05 16:57:31');
+INSERT INTO `users` VALUES (1,'drattak','$2y$10$tAoFuncwQXKkqvVbenoLgO2AJo0q7p9D2Sn/mwUQ0G9RQAvG87Y56','EMILE','Vincent','vl.emile@gmail.com',636957023,'1 Square Charles Delaunay','ASNIERES SUR SEINE',92600,NULL,'LSxuIEuOwuuKf8rieooiDlMDcUJssiokYvr0kMN7AzSPXbaeQwpASH9smcQe','2016-10-05 07:49:54','2016-10-05 17:41:29'),(2,'adelys','$2y$10$/hjffR6gyvxfkN9YUgXX3O5uuoxD7J7l9mBUWnqg6rVyEz.KCaEOm','EMILE','Dominique','adelys974@gmail.com',179307424,'1 Square Charles Delaunay','ASNIERES SUR SEINE',92600,NULL,'4lMaKgbSDVdrS8fiOvW5rOVKKaGaFEuxpILw1z6bDcMuWKPrItZH2V1oM26g','2016-10-05 15:20:23','2016-10-05 16:28:55'),(3,'testtest','$2y$10$wK3N23J6kkucGI5Cp76/rekc6iXDUD9gQbr6OhO79UIlPomGg.IKG','test','test','test@test.fr',102030405,'test','Levallois-Perret',92300,NULL,'5UYA5QwUrh2AEBBXCWs7dF1AuxdbJRNpPZ9s4bfDtW0jJyg46xgrfY9iqp4o','2016-10-05 16:53:27','2016-10-05 16:54:55'),(4,'bobjambon','$2y$10$xhIuYM5BKCUARhZBZAmUlOPrSt7Lbh4X1Egryv1337or9zVeDHNju','EMILE','Vincent','test@doubletest.fr',655555555,'1 Square Charles Delaunay','ASNIERES SUR SEINE',92600,NULL,'pE8scsMAh7dkYaufGHAUnaLetf80Azj03cvolvkBrPSHSJWd8eqJH81dOGsz','2016-10-05 16:56:53','2016-10-05 16:57:31');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
