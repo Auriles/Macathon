@@ -6,6 +6,7 @@ use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Input;
 
 class RegisterController extends Controller
 {
@@ -27,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -48,9 +49,17 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'image' => 'nullable',
+            'firstname' => 'required',
+            'pseudo' => 'required|min:6|unique:users',
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'phone' => 'required|min:10|max:10|unique:users',
+            'address'=> 'required',
+            'city'=>'required',
+            'zipcode' => 'required|min:5|max:5',
+            'state'=>'required'
         ]);
     }
 
@@ -63,9 +72,18 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'firstname' => $data['firstname'],
+            'pseudo' => $data['pseudo'],
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'phone' => $data['phone'],
+            'address' => $data['address'],
+            'city' => $data['city'],
+            'zipcode' => $data['zipcode'],
+            'state'=>$data['state'],
+            'image' => Input::file('image')
+
         ]);
     }
 }
