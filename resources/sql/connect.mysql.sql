@@ -127,11 +127,6 @@ CREATE TABLE `operation` (
 -- Dumping data for table `operation`
 --
 
-LOCK TABLES `operation` WRITE;
-/*!40000 ALTER TABLE `operation` DISABLE KEYS */;
-INSERT INTO `operation` VALUES (1,1,'2016-10-05 17:14:28',NULL,NULL,'sfdnfcklncdcs',NULL,NULL,NULL,NULL,NULL),(2,1,'2016-10-05 19:46:11',NULL,NULL,'sdsd',NULL,NULL,NULL,NULL,NULL),(4,6,'2016-10-05 19:53:03',NULL,NULL,'dfdfdffddfdfdf',NULL,NULL,NULL,NULL,'pending');
-/*!40000 ALTER TABLE `operation` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `service`
@@ -189,11 +184,7 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'drattak','$2y$10$tAoFuncwQXKkqvVbenoLgO2AJo0q7p9D2Sn/mwUQ0G9RQAvG87Y56','EMILE','Vincent','vl.emile@gmail.com',636957023,'1 Square Charles Delaunay','ASNIERES SUR SEINE',92600,NULL,'LSxuIEuOwuuKf8rieooiDlMDcUJssiokYvr0kMN7AzSPXbaeQwpASH9smcQe','2016-10-05 07:49:54','2016-10-05 17:41:29'),(2,'adelys','$2y$10$/hjffR6gyvxfkN9YUgXX3O5uuoxD7J7l9mBUWnqg6rVyEz.KCaEOm','EMILE','Dominique','adelys974@gmail.com',179307424,'1 Square Charles Delaunay','ASNIERES SUR SEINE',92600,NULL,'4lMaKgbSDVdrS8fiOvW5rOVKKaGaFEuxpILw1z6bDcMuWKPrItZH2V1oM26g','2016-10-05 15:20:23','2016-10-05 16:28:55'),(3,'testtest','$2y$10$wK3N23J6kkucGI5Cp76/rekc6iXDUD9gQbr6OhO79UIlPomGg.IKG','test','test','test@test.fr',102030405,'test','Levallois-Perret',92300,NULL,'5UYA5QwUrh2AEBBXCWs7dF1AuxdbJRNpPZ9s4bfDtW0jJyg46xgrfY9iqp4o','2016-10-05 16:53:27','2016-10-05 16:54:55'),(4,'bobjambon','$2y$10$xhIuYM5BKCUARhZBZAmUlOPrSt7Lbh4X1Egryv1337or9zVeDHNju','EMILE','Vincent','test@doubletest.fr',655555555,'1 Square Charles Delaunay','ASNIERES SUR SEINE',92600,NULL,'pE8scsMAh7dkYaufGHAUnaLetf80Azj03cvolvkBrPSHSJWd8eqJH81dOGsz','2016-10-05 16:56:53','2016-10-05 16:57:31');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
+
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
